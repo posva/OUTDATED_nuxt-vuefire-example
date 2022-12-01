@@ -6,7 +6,7 @@ specifiers:
   firebase-admin: ^11.3.0
   firebase-functions: ^4.1.0
   nuxt: ^3.0.0
-  nuxt-vuefire: ^0.0.5
+  nuxt-vuefire: ^0.0.6
   prettier: ^2.8.0
   vuefire: 3.0.0-alpha.13
 
@@ -14,7 +14,7 @@ dependencies:
   firebase: 9.14.0
   firebase-admin: 11.3.0_@firebase+app-types@0.8.1
   firebase-functions: 4.1.0_firebase-admin@11.3.0
-  nuxt-vuefire: 0.0.5_q7rfenssjh6nymm3fuk2s573hi
+  nuxt-vuefire: 0.0.6_q7rfenssjh6nymm3fuk2s573hi
   vuefire: 3.0.0-alpha.13_firebase@9.14.0
 
 devDependencies:
@@ -4460,8 +4460,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /nuxt-vuefire/0.0.5_q7rfenssjh6nymm3fuk2s573hi:
-    resolution: {integrity: sha512-b2zEP75VQYvhqtemb7hDK43LFT16C9vXqLuFPvDO2ZeNjloBt5iSprk/d6+w4xGjPM7VWLcxpzAQRfiPOZ+sBQ==}
+  /nuxt-vuefire/0.0.6_q7rfenssjh6nymm3fuk2s573hi:
+    resolution: {integrity: sha512-0Kc2kpIw+GOeZC2hV+kSjc9Y2z+J8fNUtFeoKfnRZk0zKrn0DLK2GXHAcl7piLbkB4KkK7BaLuEbgdMyzuq9tQ==}
     peerDependencies:
       '@firebase/app-types': '>=0.8.1'
       firebase: ^9.0.0

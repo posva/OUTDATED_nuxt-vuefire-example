@@ -17,7 +17,7 @@
     "firebase": "^9.14.0",
     "firebase-admin": "^11.3.0",
     "firebase-functions": "^4.1.0",
-    "nuxt-vuefire": "^0.0.5",
+    "nuxt-vuefire": "^0.0.6",
     "vuefire": "3.0.0-alpha.13"
   }
 }
