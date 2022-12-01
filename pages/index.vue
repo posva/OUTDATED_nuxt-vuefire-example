@@ -1,12 +1,14 @@
-<script lang="ts" setup>
-const nuxtApp = useNuxtApp()
-onMounted(() => {
-  console.log(!!nuxtApp.$firebaseApp)
-})
-</script>
+<script lang="ts"></script>
 
 <template>
   <div>
-    <NuxtWelcome />
+    <ul>
+      <li>
+        <NuxtLink to="/database"> Database </NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/firestore"> Firestore </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
