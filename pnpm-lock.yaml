@@ -7,7 +7,7 @@ specifiers:
   nuxt: ^3.0.0
   nuxt-vuefire: ^0.0.3
   prettier: ^2.8.0
-  vuefire: 3.0.0-alpha.12
+  vuefire: ^3.0.0-0
 
 dependencies:
   firebase: 9.14.0
