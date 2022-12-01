@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@firebase/app-types": "^0.8.1",
     "nuxt": "^3.0.0",
     "prettier": "^2.8.0"
   },
@@ -16,7 +17,7 @@
     "firebase": "^9.14.0",
     "firebase-admin": "^11.3.0",
     "firebase-functions": "^4.1.0",
-    "nuxt-vuefire": "^0.0.3",
-    "vuefire": "^3.0.0-0"
+    "nuxt-vuefire": "^0.0.5",
+    "vuefire": "3.0.0-alpha.13"
   }
 }

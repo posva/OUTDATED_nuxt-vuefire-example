@@ -8,7 +8,6 @@ const nodeModules = fileURLToPath(
 
 export default defineNuxtConfig({
   modules: [
-    //
     [
       'nuxt-vuefire',
       {
