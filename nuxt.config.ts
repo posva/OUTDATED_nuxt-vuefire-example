@@ -3,7 +3,7 @@ import { resolve } from 'node:path'
 
 // we need the root node modules where packages are hoisted
 const nodeModules = fileURLToPath(
-  new URL('../../../node_modules', import.meta.url)
+  new URL('./node_modules', import.meta.url)
 )
 
 export default defineNuxtConfig({
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
         appCheck: {
           debug: process.env.NODE_ENV !== 'production',
           isTokenAutoRefreshEnabled: true,
-          provider: 'RecaptchaV3',
+          provider: 'ReCaptchaV3',
           key: '6LfJ0vgiAAAAAHheQE7GQVdG_c9m8xipBESx_SKI',
         },
 

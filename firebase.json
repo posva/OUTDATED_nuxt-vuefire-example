@@ -7,7 +7,8 @@
     "indexes": "firestore.indexes.json"
   },
   "functions": {
-    "source": ".output/server"
+    "source": ".output/server",
+    "runtime": "nodejs16"
   },
   "hosting": {
     "site": "vue-fire-store",
