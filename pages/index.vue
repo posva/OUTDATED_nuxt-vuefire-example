@@ -1,14 +1,8 @@
-<script lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <div>
-    <ul>
-      <li>
-        <NuxtLink to="/database"> Database </NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/firestore"> Firestore </NuxtLink>
-      </li>
-    </ul>
+    <h1>Select one of the links above</h1>
   </div>
 </template>
