@@ -1,10 +1,6 @@
 import { fileURLToPath } from 'node:url'
 import { resolve } from 'node:path'
-
-// we need the root node modules where packages are hoisted
-const nodeModules = fileURLToPath(
-  new URL('./node_modules', import.meta.url)
-)
+import { resolvePath, resolveAlias, resolveFiles } from '@nuxt/kit'
 
 export default defineNuxtConfig({
   modules: [
@@ -45,6 +41,9 @@ export default defineNuxtConfig({
     // cannot be added in nuxt's resolve.alias
     'vite:extendConfig': (config, { isServer }) => {
       if (isServer) {
+        // we need the root node modules where packages are hoisted
+        const nodeModules = fileURLToPath(new URL('./node_modules', import.meta.url))
+
         config.resolve ??= {}
         config.resolve.alias ??= {}
         // @ts-ignore
