@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-
-if (process.client) {
-  console.log('rendering app')
-  debugger
-}
 
 const router = useRouter()
 const routes = router

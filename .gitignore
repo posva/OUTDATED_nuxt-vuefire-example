@@ -10,3 +10,4 @@ service-account.json
 .yalc
 yalc.lock
 .firebase
+.vite-node

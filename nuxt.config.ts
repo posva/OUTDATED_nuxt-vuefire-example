@@ -40,10 +40,12 @@ export default defineNuxtConfig({
   hooks: {
     // cannot be added in nuxt's resolve.alias
     'vite:extendConfig': (config, { isServer }) => {
+      return
+      // we need the root node modules where packages are hoisted
+      const nodeModules = fileURLToPath(
+        new URL('./node_modules', import.meta.url)
+      )
       if (isServer) {
-        // we need the root node modules where packages are hoisted
-        const nodeModules = fileURLToPath(new URL('./node_modules', import.meta.url))
-
         config.resolve ??= {}
         config.resolve.alias ??= {}
         // @ts-ignore
@@ -59,6 +61,17 @@ export default defineNuxtConfig({
 
         // add any other firebase alias you need
       }
+      // @ts-ignore
+      // config.resolve.alias['firebase/app-check'] = resolve(
+      //   nodeModules,
+      //   'firebase/app-check/dist/index.mjs'
+      // )
+
+      // @ts-ignore
+      config.resolve.alias['firebase/app'] = resolve(
+        nodeModules,
+        'firebase/app/dist/index.mjs'
+      )
     },
   },
 })
