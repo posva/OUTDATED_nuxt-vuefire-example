@@ -16,7 +16,23 @@
     "cleanUrls": true,
     "rewrites": [
       {
-        "source": "**",
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/firestore-getDoc-on-server",
+        "destination": "/firestore-getDoc-on-server/index.html"
+      },
+      {
+        "source": "/authentication",
+        "function": "server"
+      },
+      {
+        "source": "/**",
+        "function": "server"
+      },
+      {
+        "source": "/api/**",
         "function": "server"
       }
     ],

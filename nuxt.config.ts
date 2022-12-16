@@ -1,8 +1,13 @@
 import { fileURLToPath } from 'node:url'
 import { resolve } from 'node:path'
-import { resolvePath, resolveAlias, resolveFiles } from '@nuxt/kit'
 
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      routes: ['/', '/firestore-getDoc-on-server'],
+    },
+  },
+
   modules: [
     [
       'nuxt-vuefire',
@@ -28,6 +33,7 @@ export default defineNuxtConfig({
 
         admin: {
           config: {},
+          // FIXME: remove as it should be automatic on vuefire
           serviceAccount: resolve(
             fileURLToPath(new URL('./service-account.json', import.meta.url))
           ),
@@ -35,43 +41,4 @@ export default defineNuxtConfig({
       },
     ],
   ],
-
-  // NOTE: temporary workaround that cannot be put within the nuxt-vuefire module
-  hooks: {
-    // cannot be added in nuxt's resolve.alias
-    'vite:extendConfig': (config, { isServer }) => {
-      return
-      // we need the root node modules where packages are hoisted
-      const nodeModules = fileURLToPath(
-        new URL('./node_modules', import.meta.url)
-      )
-      if (isServer) {
-        config.resolve ??= {}
-        config.resolve.alias ??= {}
-        // @ts-ignore
-        config.resolve.alias['firebase/firestore'] = resolve(
-          nodeModules,
-          'firebase/firestore/dist/index.mjs'
-        )
-        // @ts-ignore
-        config.resolve.alias['@firebase/firestore'] = resolve(
-          nodeModules,
-          '@firebase/firestore/dist/index.node.mjs'
-        )
-
-        // add any other firebase alias you need
-      }
-      // @ts-ignore
-      // config.resolve.alias['firebase/app-check'] = resolve(
-      //   nodeModules,
-      //   'firebase/app-check/dist/index.mjs'
-      // )
-
-      // @ts-ignore
-      config.resolve.alias['firebase/app'] = resolve(
-        nodeModules,
-        'firebase/app/dist/index.mjs'
-      )
-    },
-  },
 })
