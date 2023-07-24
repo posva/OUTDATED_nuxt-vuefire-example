@@ -15,11 +15,7 @@ import {
   getRedirectResult,
 } from 'firebase/auth'
 import { ref } from 'vue'
-import {
-  updateCurrentUserProfile,
-  useCurrentUser,
-  useFirebaseAuth,
-} from 'vuefire'
+import { updateCurrentUserProfile, useFirebaseAuth } from 'vuefire'
 import { googleAuthProvider } from '~/helpers/auth'
 
 // auth is null on the server but it's fine as long as we don't use it. So we force the type to be non-null here because
